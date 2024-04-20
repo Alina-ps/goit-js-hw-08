@@ -94,10 +94,8 @@ gallery.addEventListener('click', event => {
     return;
   }
 
-  const largeImage = event.target.dataset.source;
-
   const bigPicture = basicLightbox.create(
-    `<img src="${largeImage}" alt="${event.target.alt}">`
+    `<img src="${event.target.dataset.source}" alt="${event.target.alt}">`
   );
   bigPicture.show();
 });
